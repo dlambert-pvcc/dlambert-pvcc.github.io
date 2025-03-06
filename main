@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Better Nuclear Options</title>
+
+    <style>
+      body {background-color:#F5F5F5; color: #252525; font-family: tahoma, verdana; margin:20px; margin-bottom:30px;}
+      a {color:#002255;}
+      .Links {border:1px solid black; background-color:#D1D1D1; margin-bottom:20px; padding:3px; padding-left:6px; font-family:tahoma, verdana; color:black;}
+      .Graph {border:1px solid black; width:900px;}
+    </style>
+  </head>
+
+  
+  <body>
+    <div class="Links"><a href="index.html">Main</a> | <a href="sources.html">Sources</a></div>
+
+    <h2>Intro</h2>
+    <p>Nuclear power seems scary. If you've never heard much about it beyond what happened at Chernobyl and Fukushima, then yes, it must sounds like one of the most dangerous options for energy generation available to us. It probably produces a lot of power, sure, but can that really be worth the cost of human life, both directly and from radiation leaks?</p>
+    <p>Fair question. But we should ask the same question of coal.</p>
+
+    <h2>Nuclear as a Fear</h2>
+    <p>Addressing nuclear first: in the first four months after the Chernobyl disaster, <a href="https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/chernobyl-bg.html">according to the U.S. Nuclear Regulatory Commission</a>, 28 workers died from the effects of radiation, and another 106 got acute radiation sickness. At least 200,000 cleanup workers over the course of two years received doses of radiation potentially well beyond safe background levels. That's pretty bad. That's worth worrying about happening again.</p>
+    <p>As for nuclear accidents that have followed, there was the Three Mile Island partial meltdown, which is recorded as the worst nuclear power plant accident in U.S. history. It's often referenced as one of the major nuclear plant incidents for which we should be wary of nuclear energy. What happened in the aftermath? Nothing. The <a href="https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html">U.S. Nuclear Regulatory Commission reports</a> there were no deaths, no accounts of radiation sickness, and despite widespread fears of such, no cases of adverse effects could be correlated with the accident. None. The aftermath did lead, however, to changes in how the USNRC regulates its licensees, raising safety standards anyway. It was treated extremely seriously, as well it should have been.</p>
+    <p>Coal, meanwhile, doesn't have any incidents that sound as scary as Chernobyl, but it does have more concretely dangerous numbers. Coal produces far more raw electricity and has far more workers in the industry than nuclear, so it makes sense that the coal industry has more fatalities, sure -- but when you compare fatalities to the amount of raw electricity generated, there's a helpful graph the U.K. nonprofit <a href="https://ourworldindata.org/safest-sources-of-energy">Global Change Data Lab</a> produced that demonstrates just how much more dangerous (and bad for our lungs) coal is than nuclear, even accounting for the Chernobyl, Fukushima, and Three Mile Island disasters.</p>
+    <p><center><img src="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/94470685-ca52-4358-539c-e9e22b859600/w=1350" class="Graph" /></center></p>
+    <p>The safety of power plants of any kind must be treated deadly serious, and according to the standards of any power industry, they are. But the safety of nuclear in particular doesn't look nearly as scary after the numbers come out.</p>
+
+    <h2>Nuclear as a Future</h2>
+    <p>Nuclear power is advancing in multiple ways, though, not just in safety protocols, but in technology. An <a href="https://environment.umn.edu/education/susteducation/pathways-to-renewable-energy/fear-of-the-unknown-energy/">article from the University of Minnesota</a> suggests how a design called a molten salt reactor would have prevented the Fukushima disaster. As the article explains, the Fukushima disaster happened in part because of loss of power from the tsunami that hit the plant, and the design of a molten salt reactor is such that it makes possible emergency dump tanks that allow its facility to shut down safely if it loses power. The <a href="https://www.energy.gov/ne/articles/3-advanced-reactor-systems-watch-2030">U.S. Department of Energy concurs</a> that it's not only a promising design, but even cleaner than our reactors currently in place.</p>
+    <p>Additionally, the <a href="https://kleinmanenergy.upenn.edu/commentary/blog/can-nuclear-power-and-coal-plant-communities-bail-each-other-out/">Kleinman Center for Energy Policy at the University of Pennsylvania published an article</a> suggesting how coal power plants that are being shut down could potentially be converted into nuclear power plants with up-front costs likely much lower than building new nuclear plants from scratch, all while keeping jobs in the same communities that previously relied or currently rely on the coal industry. Though the article doesn't offer concrete plans, it presents a promising option not just for cleaner energy, but coal workers.</p>
+    <p>My conclusion is simple: while we should be wary of repeating past mistakes with nuclear plant design and operation, nuclear energy simply doesn't deserve its high-risk reputation. Especially when it's only getting safer through new technology.</p>
+  </body>
+
+</html>
