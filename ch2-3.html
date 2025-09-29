@@ -1,0 +1,319 @@
+<!DOCTYPE = html>
+<html lang="en">
+    <head>
+        <title>Inv. to CompSci: Chapters 2 & 3</title>
+
+        <style>
+            * {box-sizing: border-box;}
+            body {color: #36352c;
+                background-color: #b9b58d;
+                font-family: tahoma, verdana;}
+
+            table {background-color: #e3e4b3;
+                width: 700px;
+                margin-left: auto;
+                margin-right: auto;}
+            table, th, td {border: 1px solid #36362c;
+                border-collapse: collapse;}
+            th, td {padding: 1px 3px;}
+            th {width: 40px;}
+
+            .studentinfo1 {font-weight: bold;
+                font-size: 1.5em;}
+            .studentinfo2 {font-weight: bold;
+                font-size: 1.2em;}
+            .intro {font-weight: bold;
+                background-color: #4c76ac;
+                color: #dfe1e4;}
+            .td_title {font-weight: bold;}
+            .td_definition {background-color: #e7e5c5;}
+            .sources {font-size: .85em;}
+
+            ol {padding-bottom: 0px;
+                margin-bottom: 0px;}
+            .smaller {font-weight: normal;
+                padding-left: 12px;}
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 2: Algorithm Discovery and Design</td>
+            </tr>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 3: The Efficiency of Algorithms</td>
+            </tr>
+            <tr>
+                <td class="studentinfo2">Student: Daniel Lambert</td>
+            </tr>
+        </table><br />
+
+        <!-- Algorithms -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Chapter 2: Algorithms</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">Explain why natural language is not an effective tool for describing algorithms.</td>
+            </tr>
+            <tr>
+                <td class="td_definition">"Natural language can be extremely verbose, causing the resulting algorithms to be rambling, unstructured, and hard to follow."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">Problem 1:<br />
+                    <div class="smaller">A student has three grades; the final grade is the average of the three. List the algorithmic steps to find the final grade.</div></td>
+            </tr>
+            <tr>
+                <td class="td_definition"><ol>
+                    <li>Get values for <i>grade 1</i>, <i>grade 2</i>, <i>grade 3</i></li>
+                    <li>Set value of <i>grade total</i> to (<i>grade 1</i> + <i>grade 2</i> + <i>grade 3</i>)</li>
+                    <li>Set value of <i>grade average</i> to (<i>grade total</i> &#247; 3)</li>
+                    <li>Print the value of <i>grade average</i></li>
+                    <li>Stop</li>
+                </ol></td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">Problem 2:<br />
+                    <div class="smaller">A car owner recorded the car's previous car mileage, 
+                        current mileage, 
+                        and the number of gallons of gas the owner filled their tank with. 
+                        List the algorithmic steps to find the car's mpg (miles per gallon).</div></td>
+            </tr>
+            <tr>
+                <td class="td_definition"><ol>
+                    <li>Get values for <i>gallons used</i>, <i>starting mileage</i>, <i>ending mileage</i></li>
+                    <li>Set value of <i>distance driven</i> to (<i>ending mileage</i> - <i>starting mileage</i>)</li>
+                    <li>Set value of <i>average miles per gallon</i> to (<i>distance driven</i> &#247; <i>gallons used</i>)</li>
+                    <li>Print the value of <i>average miles per gallon</i></li>
+                    <li>Stop</li>
+                </ol></td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.2 brief definitions -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Chapter 2: Briefly define:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">natural language</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[T]he language we speak and write in our everyday lives."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">pseudocode</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Natural language written and ordered to resemble a programming language.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">sequential operation (straight-line algorithm)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Do <i>x</i>, then do <i>y</i>, then do <i>z</i>.<br />
+                    ("[I]t executes its instructions in a straight line from top to bottom and then stops.")</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">input</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Data from the outside world provided to the computer.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">output</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition"> Data sent from the computer to the outside world.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">conditional statement</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Do <i>x</i> if <i>y</i>.<br />
+                    ("[A]sk a yes/no question and select the next operation to perform on the basis of the answer to that question.")</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">boolean condition</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">True or False.<br />
+                    (If <i>y</i> is True, do <i>x</i>.)</td>
+            </tr>
+            <tr>
+                <th rowspan="2">8.</th>
+                <td class="td_title">algorithmic discovery process</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"Finding a solution to a given problem".</td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.3 brief definitions -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Chapter 3: Briefly describe or define:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">why algorithms should be correct</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">If they're incorrect, they "can lead to mistakes that are enormously expensive or even fatal."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">why algorithms should be efficient</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[T]ime and space are not unlimited
+resources." Using fewer computer resources allows the algorithm to be used in more situations or on weaker computers.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">program maintenance</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Fixing errors as they're discovered; extending program to meet new requirements.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">importance of algorithm: ease of understanding</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"To make program maintenance as easy as possible".</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">algorithmic elegance</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[T]the algorithmic equivalent of style." Sometimes at odds with ease of understanding.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">sequential search algorithm</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Searching one by one through a list for a match in set data (a number, word, phrase, etc.).</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">order of magnitude</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"Anything that varies as a constant times <i>n</i>". An algorithm with the lowest order of magnitude requires the least time to execute.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">8.</th>
+                <td class="td_title">selection sort</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"The selection sort 'grows' a sorted subsection of the list from the back to the front" so as to sort of a list of items into order.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">9.</th>
+                <td class="td_title">flop (floating point operation)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Arithmetic operations on real numbers.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">10.</th>
+                <td class="td_title">teraflop</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A trillion floating-point operations per second.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">11.</th>
+                <td class="td_title">petaflop</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A quadrillion floating-point operations per second.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">12.</th>
+                <td class="td_title">parallel processor</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Multiple processors working on different problems or smaller divisions of a larger problem simultaenously.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">13.</th>
+                <td class="td_title">data cleanup problem</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">The issue of how best to remove unwanted data from a list.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">14.</th>
+                <td class="td_title">binary search algorithm</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Search middle of list for <i>x</i>; if selection is <i>x</i>, search is over. If selection is higher/lower than <i>x</i>, remove lower/upper half of list. Search middle of new list for <i>x</i>; if selection is <i>x</i>, search is over. Et cetera.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">15.</th>
+                <td class="td_title">pattern matching</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Find all instances of <i>pattern x</i> within <i>text y</i>.</td>
+            </tr>
+        </table><br />
+
+        <!-- Karl Friedrich Gauss section -->
+        <table>
+            <tr>
+                <td colspan="4" class="intro">Karl Friedrich Gauss</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td colspan="3" class="td_title">Give a brief overview of Karl Friedrich Gauss's mathematics abilities and scientific achievements.</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="td_definition">As explained by Encyclopedia Britannica, he could do elaborate calculations in his head. His achievements include publishing the first systematic textbook on algebraic number theory and his rediscovery of the asteroid Ceres, a feat in calculating the asteroid's trajectory after it was first lost behind the sun.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td colspan="2" class="td_title">Describe Karl Friedrich Gauss's algorithm for adding up the numbers from 1 to 100.</td>
+                <td rowspan="6" class="td_definition sources"><img src="gaussian_before_and_after.jpg" height="335px" weidth="219px" /><br />
+                    Image credit:<br /> <a href="https://en.wikipedia.org/wiki/Gaussian_blur">https://en.wikipedia.org/wiki/Gaussian_blur</a></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">The highest and lowest numbers, second highest and second lowest numbers, etc., can all be summed to 101. That makes 50 pairs of 101. Therefore, the solution equals (100 &#247; 2) x 101, or, as long as the highest value is an even number, (highest number &#247; 2) x (highest number + lowest number).</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">What are gaussian optics?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">According to RP Photonics Encyclopedia, "a framework for describing optical phenomena, which is based on geometrical optics (ray optics) and makes extensive use of the paraxial approximation." Useful for calculating focal lengths.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">What is a "gaussian blur" and how is it used in digital image editing?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">According to Adobe's website, it's "the application of a mathematical function to an image in order to blur it." It's used to highlight certain parts of an image by blurring all the rest, or else to soften some or all parts of an image. Before-and-after example of softening on right.</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="sources">Sources: <a href="https://www.britannica.com/biography/Carl-Friedrich-Gauss">https://www.britannica.com/biography/Carl-Friedrich-Gauss</a><br />
+                    <a href="https://www.rp-photonics.com/gaussian_optics.html">https://www.rp-photonics.com/gaussian_optics.html</a><br />
+                    <a href="https://www.adobe.com/products/photoshop/gaussian-blur.html">https://www.adobe.com/products/photoshop/gaussian-blur.html</a>
+                    </td>
+            </tr>
+        </table>
+    </body>
+</html>
