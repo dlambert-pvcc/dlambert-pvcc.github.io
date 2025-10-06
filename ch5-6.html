@@ -1,0 +1,397 @@
+<!DOCTYPE = html>
+<html lang="en">
+    <head>
+        <title>Inv. to CompSci: Chapters 5 & 6</title>
+
+        <style>
+            * {box-sizing: border-box;}
+            body {color: #171a17;
+                background-color: #89968b;
+                font-family: tahoma, verdana;}
+
+            table {background-color: #99c28f;
+                width: 700px;
+                margin-left: auto;
+                margin-right: auto;}
+            table, th, td {border: 1px solid #2c362f;
+                border-collapse: collapse;}
+            th, td {padding: 1px 3px;}
+            th {width: 40px;}
+
+            .studentinfo1 {font-weight: bold;
+                font-size: 1.5em;}
+            .studentinfo2 {font-weight: bold;
+                font-size: 1.2em;}
+            .intro {font-weight: bold;
+                background-color: #a39c31;}
+            .td_title {font-weight: bold;}
+            .td_definition {background-color: #afdaa4;}
+            .sources {font-size: .85em;}
+
+            .smaller {font-weight: normal;
+                padding-left: 12px;}
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 5: Computer Systems Organization</td>
+            </tr>
+            <tr>
+                <td class="studentinfo2">Student: Daniel Lambert</td>
+            </tr>
+        </table><br />
+
+        <!-- Von Neumann section -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Von Neumann computer architecture, 4 major subsystems:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">Memory</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">I/O</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">ALU</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition">Control unit</td>
+            </tr>
+        </table><br />
+
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Von Neumann computer architecture, 3 characteristics:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">The four major subsystems</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">Stored program concept</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">Sequential operations; one instruction at a time</td>
+            </tr>
+        </table><br />
+
+        <!-- Computer Architecture Terms -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Computer Architecture Terms</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">RAM</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Random access memory. The technique computers use for accessing any data stored in a memory cell at the same speed as any other cell.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">cache</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Where data nearby what was intentionally accessed gets copied to and stored. Much smaller but faster than RAM.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">Principle of locality: The high likelihood that when a program fetches a piece of data or an instruction:</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition"><div class="smaller">1. "It will access that same instruction or piece of data in the very near future."<br />
+                    2. "It will soon access the instructions or data that are located near that piece of data, where 'near' means an address whose numerical value is close to this one."</div></td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">ROM</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Read-only memory. A "special type of random access memory into which information has been prerecorded during manufacture." For booting up a computer.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">memory cell size</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Number of bits per cell. Nowadays, standard is 8, a byte.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">memory cell address</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Location of each cell, not the contents.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">maximum memory size</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Maximum theoretical amount of memory cells a computer can be equipped with, not just its current size of memory.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">8.</th>
+                <td class="td_title">register</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Special high-speed storage cell for operands and holding results of completed math operations. Similar to RAM cells, but without addresses or general-purpose storage.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">9.</th>
+                <td class="td_title">fetch</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Get me a copy of the data from that address.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">10.</th>
+                <td class="td_title">store</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Overwrite the data in that address with this data.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">11.</th>
+                <td class="td_title">memory access time</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">How long it takes to fetch or store data. Same between all addresses.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">12.</th>
+                <td class="td_title">DASD</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Direct access storage device(s). "[E]very unit of information still has a unique address, but the time needed to access that information depends on its physical location and the current state of the device." Hard drives, DVDs.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">13.</th>
+                <td class="td_title">Arithmetic and Logic Unit (ALU)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Subsystem for math and logical operations: addition, subtraction, equality checks.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">14.</th>
+                <td class="td_title">Control Unit</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Subsystem for fetching data, decoding what to do with that data, and executing appropriate commands on that data with help from the ALU or memory. These days, the ALU and control unit are both just part of the processor.</td>
+            </tr>
+        </table><br /><br />
+
+        <!-- Ch.6 4-list and 4-list -->
+         <table>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 6</td>
+            </tr>
+            <tr>
+                <td class="studentinfo2">Student: still me</td>
+            </tr>
+        </table><br />
+
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Four things the interface between the computer and the hardware does:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">"Hides from the user the messy details of the underlying hardware."</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">"Presents information about what is happening in a way that does not require in-depth knowledge of the internal structure of the system."</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">"Allows easy user access to the resources available on this computer."</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition">"Prevents accidental or intentional damage to hardware, programs, and data."</td>
+            </tr>
+        </table><br />
+
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Responsibilities of systems software:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">"Hides the complex and unimportant (to the user) details of the internal structure of the Von Neumann architecture."</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">"Presents important information to the user in a way that is easy to understand."</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">"Allows the user to access machine resources in a simple and efficient way."</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition">"Provides a secure and safe environment in which to operate."</td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.6 terms / operating system functions -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Terms</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">systems software</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Collection of programs managing and facilitating access to resources.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">user interface</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Nowadays, the GUI. Text-based or graphical ways the user can control the computer.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">language services</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Programs for programming. Assemblers, compilers, interpreters.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">memory managers</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Programs for allocating and reclaiming memory space.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">information managers</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Programs for handling data on storage devices like flash drives.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">i/o managers</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Software packages for using different kinds of I/O devices.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">scheduler</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Program for selecting what programs to run. Lets user run multiple programs at once.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">8.</th>
+                <td class="td_title">utilities</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Library routines collections. "Text editors, online help routines, image and sound applications, and control panels are examples of utility routines."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">9.</th>
+                <td class="td_title">assembly language</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Low-level programming language. Developed to let people escape the soup of binary machine language.</td>
+            </tr>
+        </table><br />
+
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Functions of an Operating System</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">"User interface management (a receptionist)"</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">"Control of access to the system and to data files (a security guard)"</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">"Program scheduling and activation (a dispatcher)"</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition">"Efficient resource allocation (an efficiency expert)"</td>
+            </tr>
+            <tr>
+                <th>5.</th>
+                <td class="td_definition">"Deadlock detection and error detection (a traffic officer)"</td>
+            </tr>
+        </table><br />
+
+        <!-- Size of Byte Groups: Powers of 10 -->
+        <table>
+            <tr>
+                <th class="intro">Quantity in Bytes</th>
+                <th class="intro">Base-10 Value</th>
+                <th class="intro">Amount of Textual Information</th>
+            </tr>
+            <tr>
+                <td>1 byte</td>
+                <td class="td_definition">10^0</td>
+                <td>One character</td>
+            </tr>
+            <tr>
+                <td>1 kilobyte</td>
+                <td class="td_definition">10^3</td>
+                <td>One typed page</td>
+            </tr>
+            <tr>
+                <td>1 megabyte</td>
+                <td class="td_definition">10^6</td>
+                <td>Two or three novels</td>
+            </tr>
+            <tr>
+                <td>1 gigabyte</td>
+                <td class="td_definition">10^9</td>
+                <td>A departmental library or a large personal library</td>
+            </tr>
+            <tr>
+                <td>1 terabyte</td>
+                <td class="td_definition">10^12</td>
+                <td>The library of a major academic research university</td>
+            </tr>
+            <tr>
+                <td>1 petabyte</td>
+                <td class="td_definition">10^15</td>
+                <td>All printed material in all libraries in North America</td>
+            </tr>
+            <tr>
+                <td>1 exabyte</td>
+                <td class="td_definition">10^18</td>
+                <td>All words ever printed throughout human history</td>
+            </tr>
+            <tr>
+                <td>1 zettabyte</td>
+                <td class="td_definition">10^21</td>
+                <td>As of 2014, the total amount of information stored globally on the World Wide Web was about 4-5 zettabytes</td>
+            </tr>
+            <tr>
+                <td>1 yottabyte</td>
+                <td class="td_definition">10^24</td>
+                <td>According to an article in Gizmodo, a design and technology blog, storing 1 yottabyte of data on hard drives would require 1 million data centers that would fill the states of Rhode Island and Delaware</td>
+            </tr>
+        </table>
+    </body>
+</html>
