@@ -1,0 +1,329 @@
+<!DOCTYPE = html>
+<html lang="en">
+    <head>
+        <title>Inv. to CompSci: Chapter 7</title>
+
+        <style>
+            * {box-sizing: border-box;}
+            body {color: #dfdfdf;
+                background-color: #2e1a27;
+                font-family: tahoma, verdana;}
+
+            table {background-color: #613a51;
+                width: 700px;
+                margin-left: auto;
+                margin-right: auto;}
+            table, th, td {border: 1px solid #222222;
+                border-collapse: collapse;}
+            th, td {padding: 1px 3px;}
+            th {width: 40px;}
+
+            .studentinfo1 {font-weight: bold;
+                font-size: 1.5em;}
+            .studentinfo2 {font-weight: bold;
+                font-size: 1.2em;}
+            .intro {font-weight: bold;
+                background-color: #293828;}
+            .td_title {font-weight: bold;}
+            .td_definition {background-color: #4b2a3e;}
+            .sources {font-size: .85em;}
+            .sources a {color: #bfbfbf;}
+            .sources a:hover {color: #9f9f9f;}
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 7: Computer Networks & Cloud Computing</td>
+            </tr>
+            <tr>
+                <td class="studentinfo2">Student: Daniel Lambert</td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.7 brief definitions -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Briefly describe or define:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">computer network</td>
+            </tr>
+            <tr>
+                <td class="td_definition">A "set of independent computer systems interconnected by telecommunication links for
+                    the purpose of sharing information and resources."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">analog device (define and give an example)</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Uses a "continuous physical quantity" (voltage or otherwise) to represent information,
+                    like a Timex powered by a battery.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">digital device (define and give an example)</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Uses binary to represent information, like a smartwatch or a Timex with a screen.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">modem</td>
+            </tr>
+            <tr>
+                <td class="td_definition">"[M]odulates, or alters, a standard analog signal called a <i>carrier wave</i> so that
+                    it encodes binary information."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">bandwidth</td>
+            </tr>
+            <tr>
+                <td class="td_definition">The "rate at which information [can] be sent and received".</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">ethernet</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Originally coaxial cable, now also fiber optic or twisted-pair copper wire. Nowadays,
+                    1 Gbps transmission speed or greater.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">WLAN</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Wireless local area network. For homes, offices, or small shops.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">8.</th>
+                <td class="td_title">IEEE 802.11 wireless network standard</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Wi-Fi. Connects computers to the Internet when in range of a router, usually 150-300
+                    feet. Usually uses 2.4 GHz radio band.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">9.</th>
+                <td class="td_title">MAN</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Metropolitan area network. Few city blocks' worth of range, or a neighborhood network.
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2">10.</th>
+                <td class="td_title">Internet of Things</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Somebody's refrigerator is now connecting to the Internet just like you.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">11.</th>
+                <td class="td_title">LAN</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Local area network. Owner of the devices using the LAN owns the means of communication
+                    as well, like the cables and network bridges.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">12.</th>
+                <td class="td_title">repeater</td>
+            </tr>
+            <tr>
+                <td class="td_definition">"[A] device that simply amplifies and forwards a signal." Can connect together
+                    multiple LANs.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">13.</th>
+                <td class="td_title">bridge</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Smarter than repeaters. Checks for whether or not it needs to pass data between LANs
+                    before doing so.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">14.</th>
+                <td class="td_title">WAN</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Wide area network. Dedicated point-to-point lines that connect two far-apart devices
+                    directly. Data hops along different nodes to reach destination.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">15.</th>
+                <td class="td_title">packet and packet switching</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Packet: "an information block with a fixed maximum size that is transmitted through
+                    the network as a single unit." Packet switching: the method of transmitting packets across different nodes
+                    to their same destination.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">16.</th>
+                <td class="td_title">ISP</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Internet service provider. Businesses (frequently local monopolies) that connects
+                    private networks to the Internet.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">17.</th>
+                <td class="td_title">firewall</td>
+            </tr>
+            <tr>
+                <td class="td_definition">"[H]ardware and software placed at the entry points to a company's [or individual's]
+                    private network to protect it from unauthorized access."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">18.</th>
+                <td class="td_title">protocol</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Networked machines' equivalent to a social contract. "[A] mutually agreed-upon set of
+                    rules, conventions, and agreements for the efficient and orderly exchange of information."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">19.</th>
+                <td class="td_title">cloud computing</td>
+            </tr>
+            <tr>
+                <td class="td_definition">Alternative to the client/server model with a name that truly embodies the opaqueness
+                    of what companies do with the private information we provide them. <i>Ahem</i>: "[W]ith cloud computing the
+                    servers no longer need to be local to the client population, and they no longer must be provided by your own
+                    organization." Prepackaged remote server service.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">20.</th>
+                <td class="td_title">net neutrality</td>
+            </tr>
+            <tr>
+                <td class="td_definition">"[A] public information network such as an Internet sercice provider (ISP) should
+                    treat all users, all platforms, and all content equally--essentially it should be operated like the water,
+                    electric, and gas companies, as publicly regulated utilities."</td>
+            </tr>
+        </table><br />
+
+        <!-- TCP/IP five layers-->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Briefly describe the five layers of TCP/IP (the Internet protocol hierarchy):</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Layer 1.</th>
+                <td class="td_title">Physical layer</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[G]overn(s) the exchange of binary digits (bits) across a physical
+                    communication channel". Cable or wireless protocols, or the "bit pipe."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Layer 2.</th>
+                <td class="td_title">Data link layer</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Figuring out the start and end of messages, dealing with errors in
+                    transmission, transmission collision handling.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Layer 3.</th>
+                <td class="td_title">Network layer</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">The IP in TCP/IP, for Internet Protocol. Ensures each node in a network
+                    runs the same protocols and delivers between nodes in the same network.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Layer 4.</th>
+                <td class="td_title">Transport layer</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">The TCP in TCP/IP, basically the node postal service. In charge of
+                    assigning ports within the same IP address for more specific data transmission to programs.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Layer 5.</th>
+                <td class="td_title">Application layer</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">End-user rules. Several separate protocols for governing how a user
+                    accesses webpages, sends and receives emails, accesses remote files or terminals, and translates IP
+                    addresses.</td>
+            </tr>
+        </table><br />
+
+        <!-- 3 network services and benefits -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">List and briefly describe at least 3 network services and benefits:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">Interpersonal communications, like email and forums.</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">Social networking, like Facebook and Discord.</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">Resource sharing, like access to a medical database or GameFAQs. Examples not equally weighted.</td>
+            </tr>
+        </table><br />
+
+        <!-- IEEE section -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">IEEE (the initialism, not a scream):</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">What does the acronym, <b>IEEE</b>, stand for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Institute of Electrical and Electronics Engineers.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">What is the mission and vision of IEEE?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Using their knowledge and vision to benefit humanity.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">What are the benefits of IEEE membership?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Expanding one's networking, developing one's professional skills, finding
+                    financial support, and qualifying for member rates or discounts.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">What are the requirements for IEEE student membership, and how much does undergraduate
+                    membership cost annually for students from the USA?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"You can qualify for a Student or Graduate Student membership for up to
+                    eight cumulative years as a registered undergraduate or graduate student carrying at least 50 percent of a
+                    full-time academic program in an IEEE-designated field." Annual undergraduate due is $32.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="sources">Sources: <a href="https://www.ieee.org/about/ieee-history">https://www.ieee.org/about/ieee-history</a>
+                    <br /><a href="https://www.ieee.org/membership/join">https://www.ieee.org/membership/join</a>
+                </td>
+            </tr>
+        </table><br />
+
+        <table>
+            <tr>
+                <td><img src="topologies.jpg" alt="an amateur illustration of the bus, ring, and star network topologies, sized down with MS Paint" /></td>
+            </tr>
+        </table>
+    </body>
+</html>
