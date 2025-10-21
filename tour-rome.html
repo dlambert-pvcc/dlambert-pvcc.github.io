@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    NAME: Daniel Lambert
+    DESCRIPTION: This code will find the cost of a beach cottage rental.
+-->
+<head>
+    <title>Holiday Roma Tours</title>
+    <style>
+        * {box-sizing: border-box;}
+        .entire_page {width: 700px;
+            margin-left: auto;
+            margin-right: auto;}
+        body {color: #3a2407;
+            background-color: #d0d69d;
+            font-family: verdana, arial, sans-serif;
+            font-size: 15px;}
+        h1 {text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            font-family: "times new roman", serif;}
+        .center {display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;}
+        table, th, td {border-collapse: collapse;
+            border: 1px black solid;}
+        table {margin-left: auto;
+            margin-right: auto;
+            width: 700px;
+            background-color: #b6bb87}
+        th {font-size: 1.2em;}
+        th, td {padding: 1px 3px;}
+        .td_title {font-weight: bold;}
+        .vat {font-style: italic;
+            text-align: center;}
+    </style>
+    <script type="text/javascript">
+        function tour_roma_cost() {
+        //rates variables
+            var air = 1200.00;
+            var hotel = 265.00;
+            var meals = 75.00;
+            var bus = 80.00;
+            var activities = 220.00;
+            var how_to_pay = "\n\nCredit and debit cards accepted for\nour FABULOUS Holiday Roma Tours!";
+
+        //data variables
+            var num_guests = 0;
+            var air_cost = 0;
+            var hotel_cost = 0;
+            var meals_cost = 0;
+            var bus_cost = 0;
+            var activities_cost = 0;
+            var total = 0;
+
+        //calculations
+            num_guests = prompt("How many people are going on the tour?\n\nPlease keep in mind we book up to only four guests at a time.");
+            air_cost = air * num_guests;
+            hotel_cost = hotel * 5;
+            meals_cost = meals * 5 * num_guests;
+            bus_cost = bus * num_guests;
+            activities_cost = activities * num_guests;
+            total = air_cost + hotel_cost + meals_cost + bus_cost + activities_cost;
+
+            window.alert("\nTOUR ROMA FOR 5 NIGHTS" +
+                  "\n------------------------------------------" +
+                  "\nNumber of guests: " + num_guests +
+                  "\n------------------------------------------" +
+                  "\nAirfare:      $" + air_cost +
+                  "\nHotel room:   $" + hotel_cost +
+                  "\nMeals:        $" + meals_cost +
+                  "\nBus pass:     $" + bus_cost +
+                  "\nActivities:   $" + activities_cost +
+                  "\n------------------------------------------" +
+                  "\nTotal:         $" + total + how_to_pay);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="entire_page">
+        <h1>Holiday Roma!</h1>
+    
+        <p>Visit Rome with us! <b>Holiday Roma Tours</b> are the most exciting way to visit this ancient Italian city. Stay
+            in the luxurious <b>Hotel Farnese</b>, enjoy fabulous meals each day, and visit Rome's most renowned sites and
+            museums on our <b>Hop On/Hop Off</b> buses. Your trip will also include a night of musical theater at the
+            <b>Teatro Sistina</b>!
+        </p>
+    
+        <p><img src="rome.jpg" alt="ancient roman pillars surrounded by more recent architecture" class="center" /></p>
+    
+        <table>
+            <tr>
+                <th colspan="3">Holiday Roma Tour Rates</th>
+            </tr>
+            <tr>
+                <td class="td_title" width="17%">Air:</td>
+                <td>Round trip airfare from JFK to Rome</td>
+                <td width="20%">$1,200</td>
+            </tr>
+            <tr>
+                <td class="td_title">Hotel:</td>
+                <td>5 nights in 4-star hotel</td>
+                <td>$265 per night</td>
+            </tr>
+            <tr>
+                <td class="td_title">Meals:</td>
+                <td>Includes 5 breakfasts & 5 dinners</td>
+                <td>$75 per day</td>
+            </tr>
+            <tr>
+                <td class="td_title">Bus Tour:</td>
+                <td>Hop On/Hop Off bus: 3-day pass</td>
+                <td>$80</td>
+            </tr>
+            <tr>
+                <td class="td_title">Activities:</td>
+                <td>Includes 1 theater performance & museum tickets</td>
+                <td>$220</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="vat">VAT is included. Alcoholic beverages and tips are not included.</td>
+            </tr>
+        </table>
+    
+        <br />
+        <div class="center"><form>
+            <input type="button" value="Click to calculate Tour Roma tour cost" class="button" onclick="tour_roma_cost()" />
+        </form></div>
+    </div>
+
+</body>
+</html>
