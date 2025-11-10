@@ -1,0 +1,524 @@
+<!DOCTYPE = html>
+<html lang="en">
+    <head>
+        <title>Inv. to CompSci: Chapters 9 & 10</title>
+
+        <style>
+            * {box-sizing: border-box;}
+            body {color: #1a1a18;
+                background-color: #ddd8c9;
+                font-family: tahoma, verdana;}
+
+            table {background-color: #ffbe6a;
+                width: 700px;
+                margin-left: auto;
+                margin-right: auto;}
+            table, th, td {border: 1px solid #36342c;
+                border-collapse: collapse;}
+            th, td {padding: 1px 3px;}
+            th {width: 40px;}
+            /* pumpkin spice flavored this time aw yisss */
+
+            .studentinfo1 {font-weight: bold;
+                font-size: 1.5em;}
+            .studentinfo2 {font-weight: bold;
+                font-size: 1.2em;}
+            .intro {font-weight: bold;
+                background-color: #cead73;}
+            .td_title {font-weight: bold;}
+            .td_definition {background-color: #fdcc8b;}
+            .sources {font-size: .85em;}
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 9: Introduction to High Level Languages</td>
+            </tr>
+            <tr>
+                <td class="studentinfo2">Student: Daniel Lambert</td>
+            </tr>
+        </table><br />
+
+        <!-- Four disadvantages of assembly -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">List four disadvantages of using assembly language:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">Pseudo-manual movement of data between locations and registers.</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">Tasks are broken down into incredibly tiny components.</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">It's machine specific.</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition">It's way harder than reading something like English or Spanish.</td>
+            </tr>
+        </table><br />
+
+        <!-- Four expectations for high-level -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">List four expectations programmers have for writing programs in a high-level language
+                    ("third generation" language):</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition">Manual memory allocation is unnecessary.</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition">Their building blocks are larger.</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition">They're not machine specific.</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition">They're closer to a natural language, with recognizable math.</td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.9 brief definitions -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Briefly describe or define:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">object code</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[B]inary machine language instructions".</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">source code</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[H]igh-level language instructions".</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">procedural language</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[...] consists of sequences of statements that manipulate data items." Step
+                    by step instructions.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">Integrated Development Environment (IDE)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A combined text editor, compiler, linker, and debugger, frequently with a lot
+                    more extra features. What I'm writing this in.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">software development life cycle</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[T]he overall sequence of steps needed to copmlete a large-scaled software
+                    project."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">waterfall model of software development</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">One phase before the next, before the next, before the next. Each phase must
+                    be completed before moving on.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">agile model of software development</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Flexibility in design and editing. Readiness to go back and make changes to
+                    previous phases.</td>
+            </tr>
+        </table><br />
+
+        <!-- Software dev life cycle -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Describe each of these components of the software development life cycle:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">feasibility study</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Project proposal evaluation; cost/benefit analysis.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">problem specification</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"[D]eveloping a clear, concise, and unambiguous statement of the exact problem
+                    the software is to solve."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">program design</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Figuring out how to do the above before getting started on it.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4.</th>
+                <td class="td_title">algorithm selection</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Picking the best algorithms for the job (and each sub-job).</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5.</th>
+                <td class="td_title">coding</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">The fun stuff. Converting designs into computer code.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6.</th>
+                <td class="td_title">debugging</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">The miserable stuff. Fixing errors in the code.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">7.</th>
+                <td class="td_title">testing</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Making sure the program or module does what it's actually supposed to. Should
+                    be done through coding and debugging.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">8.</th>
+                <td class="td_title">verification</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Checking that inputs and outputs behave as intended as long as the inputs are
+                    correct.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">9.</th>
+                <td class="td_title">documentation</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">This. But in unambiguous words.</td>
+            </tr>
+        </table><br />
+
+        <!-- Questions & answers -->
+        <table>
+            <tr>
+                <td colspan="2" class="studentinfo1 intro">Chapter 10: Tower of Babel: Programming Languages</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="intro">Questions & Answers:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">Why does the textbook refer to "the Tower of Babel" regarding computer languages?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: References a Bible story. There's too many programming languages to learn
+                    them all anymore.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">Why isn't there just one computer proramming language?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Different languages have different kinds of tasks they're suited for. Not
+                    all are equally suited for the same problem.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">Why didn't FORTRAN use the less than ( &lt; ) symbol when comparing two numbers?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: "[T]he keypunches that were used to create the punched cards on which early
+                    Fortran programs were submitted to the computer had no such symbols."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What was COBOL designed for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Business needs, for business people. Inventory and payroll.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What was the language, C, designed for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Writing UNIX.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is the difference between C and C++?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Everything that can be done in C can be done in C++, but not everything
+                    that can be done in C++ can be done in C. C++ has additional and newer features, like object-oriented
+                    programming.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">Who or what is the language, Ada, named for and why?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Ada Lovelace, the world's first programmer.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is a Java "applet"?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Programs specifically for webpages.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">How much does Python cost to download, install, and use?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: It's completely free. I've used it in a couple classes, it's nice.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is Microsoft.NET?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: A huge framework of tools for C# and several other languages. "It was
+                    designed so that traditional text-based applications, GUI applicattions, and web-based programs can all be built
+                    with equal ease."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is SQL and what is it used for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: <i>Structured Query Language</i>, a language designed specifically for
+                    databases. I'm on the side that pronounces it as "sequel."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is R and what is it used for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Another specialized language, this time for stats and graphics</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is Go (or golang) and what is it used for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Google's language. Meant to offer ease of programming without sacrificing
+                    efficiency and safety of execution.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is Swift and what is it used for?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Apple's language for iOS development. Now works on Linux as well.</td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.10 brief definitions -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Briefly describe or define:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1.</th>
+                <td class="td_title">functional programming</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"A functional programming language views every task in terms of (surprise!)
+                    functions." Offers built-in math functions for programmers.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2.</th>
+                <td class="td_title">logic programming</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"In logic programming, various facts are asserted to be true, and on the basis
+                    of these facts, a logic program can infer or deduce other facts."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3.</th>
+                <td class="td_title">parallel programming</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">"Parallel processing is really a catchall term for a variety of approaches to
+                    computing architectures and algorithm design." Multiple processors handle different subtasks simultaneously.
+                </td>
+            </tr>
+        </table><br />
+
+        <!-- Language comparisons -->
+        <table>
+            <tr>
+                <td colspan="5" class="intro">Computer Programming Language Comparisons:</td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <th>Comments</th>
+                <th>Input statement(s)</th>
+                <th>Increase by 1</th>
+                <th>Output statement</th>
+            </tr>
+            <tr class="td_definition">
+                <td>1. Ada</td>
+                <td>--</td>
+                <td>TEST_IO.PUT<br />INT_IO.GET</td>
+                <td>n := n + 1;</td>
+                <td>TEXT_IO.PUT</td>
+            </tr>
+            <tr>
+                <td>2. C++</td>
+                <td>//</td>
+                <td>cin &gt;&gt;</td>
+                <td>n = n + 1 (or n += 1)</td>
+                <td>cout &lt;&lt;</td>
+            </tr>
+            <tr class="td_definition">
+                <td>3. C#</td>
+                <td>//</td>
+                <td>Console.ReadLine()</td>
+                <td>n = n + 1</td>
+                <td>Console.Write(string) or Console.WriteLine(string)</td>
+            </tr>
+            <tr>
+                <td>4. Java</td>
+                <td>//</td>
+                <td>Scanner inp = new Scanner(System.in);<br />
+                    number = inp.nextInt();</td>
+                <td>n = n + 1</td>
+                <td>System.out.print(string) or System.out.println(string)</td>
+            </tr>
+            <tr class="td_definition">
+                <td>5. Python</td>
+                <td>#</td>
+                <td>input("prompt")</td>
+                <td>n = n + 1 (or n += 1)</td>
+                <td>print(string)</td>
+            </tr>
+        </table><br />
+
+        <!-- Stack overflow Q&A -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Stack Overflow Q & A:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is the purpose of Stack Overflow?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: "Empowering the world to develop technology through collective knowledge", mostly through their Q&A platform.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What is a line of code or code snippet (small chunk of code) to do this (how to make background-color transparent in css)?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: background-color: transparent;</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What should a Stack Overflow Questions <u>title</u> do?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: "Be specific and imagine you're asking a question to another person."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What are the steps to writing a good Stack Overflow question?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: "Summarize the problem", "Describe what you've tried", "Show some code."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">How many people answered the 2021 survey?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Over 80,000.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What were the top three countries where responses came from?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: USA, then India, then Germany.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What was the age range of coders when they wrote their first line of code?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: "Coders start young: over 50% of respondents wrote their first line of code between the ages of 11 to 17."</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What were the three most popular ways of learning how to code?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: "Other online resources (videos, blogs, etc)", then "School", then "Books/Physical media".</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">How long have most people been coding?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: Almost one in three respondents had been at it for 5 to 9 years. Professionally, it's 1 to 4 years.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What percentage of coders identified as male?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: 91.67%. I expected it bad, but not that bad. And only 1% identified as trans? In 2021? A lot of them must still have been in the closet.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">Your opinion: How can the IT community get more women in coding?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: I don't know about the IT community specifically, but I think a broader
+                    rejection of the idea that men and women are biologically wired for different ways of thinking would help a lot.
+                    Anecdotally, I remember some kind of study showing that women who were told ahead of time that "women are shown
+                    to be poor at thinking in 3D" performed worse at puzzles involving 3D thinking, but when other women
+                    were told that "women are shown to be good at thinking in 3D," they performed just as well as men who were
+                    studied. People (not just men, but women who have bought into it as well) who claim that women just aren't as 
+                    well suited for programming or other mental disciplines should be roundly mocked.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Q:</th>
+                <td class="td_title">What were the top three programming languages?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A: JavaScript, then HTML/CSS if you count them as programming, then Python. Without counting HTML/CSS, SQL is third place.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="sources">Sources: <a href="https://stackoverflow.com/questions/29483282/how-to-make-the-background-color-transparent">https://stackoverflow.com/questions/29483282/how-to-make-the-background-color-transparent</a></td>
+            </tr>
+        </table><br />
+    </body>
+</html>
