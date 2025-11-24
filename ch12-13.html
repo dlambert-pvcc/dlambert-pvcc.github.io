@@ -1,0 +1,259 @@
+<!DOCTYPE = html>
+<html lang="en">
+    <head>
+        <title>Inv. to CompSci: Chapters 12 & 13</title>
+
+        <style>
+            * {box-sizing: border-box;}
+            body {color: #cedde6;
+                background-color: #3a4849;
+                font-family: tahoma, verdana;}
+
+            table {background-color: #063b3d;
+                width: 700px;
+                margin-left: auto;
+                margin-right: auto;}
+            table, th, td {border: 1px solid #031e1f;
+                border-collapse: collapse;}
+            th, td {padding: 1px 3px;}
+            th {width: 40px;}
+
+            .studentinfo1 {font-weight: bold;
+                font-size: 1.5em;}
+            .studentinfo2 {font-weight: bold;
+                font-size: 1.2em;}
+            .intro {font-weight: bold;
+                background-color: #09494b;}
+            .td_title {font-weight: bold;}
+            .td_definition {background-color: #053031;}
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td class="studentinfo1 intro">Chapter 12: Models of Computation</td>
+            </tr>
+            <tr>
+                <td class="studentinfo2">Student: Daniel Lambert</td>
+            </tr>
+        </table><br />
+
+        <!-- Purpose of a model -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">1. What is the purpose of a model?</td>
+            </tr>
+            <tr>
+                <th>x</th>
+                <td class="td_definition">To experiment safely or cheaply with a close approximation of what's actually being studied or practiced.</td>
+            </tr>
+        </table><br />
+
+        <!-- Four model phenomena -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">2. List four phenomena of a model:</td>
+            </tr>
+            <tr>
+                <th>a.</th>
+                <td class="td_definition">"Captures the essences - the important properties - of the real thing".</td>
+            </tr>
+            <tr>
+                <th>b.</th>
+                <td class="td_definition">"Probably differs in scale from the real thing".</td>
+            </tr>
+            <tr>
+                <th>c.</th>
+                <td class="td_definition">"Omits some of the details of the real thing".</td>
+            </tr>
+            <tr>
+                <th>d.</th>
+                <td class="td_definition">"Lacks the full functionality of the real thing."</td>
+            </tr>
+        </table><br />
+
+        <!-- Four computing agent things -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">3. List four things a computing agent should be able to do:</td>
+            </tr>
+            <tr>
+                <th>a.</th>
+                <td class="td_definition">"Accept input."</td>
+            </tr>
+            <tr>
+                <th>b.</th>
+                <td class="td_definition">"Store information in memory and retrieve it from memory."</td>
+            </tr>
+            <tr>
+                <th>c.</th>
+                <td class="td_definition">Follow the algorithm properly.</td>
+            </tr>
+            <tr>
+                <th>d.</th>
+                <td class="td_definition">"Produce output."</td>
+            </tr>
+        </table><br />
+
+        <!-- Four algorithm characteristics -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">4. List four characteristics of an algorithm:</td>
+            </tr>
+            <tr>
+                <th>a.</th>
+                <td class="td_definition">It must be "a well-ordered collection".</td>
+            </tr>
+            <tr>
+                <th>b.</th>
+                <td class="td_definition">It must "[c]onsist of unambiguous and effectively computable operations".</td>
+            </tr>
+            <tr>
+                <th>c.</th>
+                <td class="td_definition">It must "[h]alt in a finite amount of time".</td>
+            </tr>
+            <tr>
+                <th>d.</th>
+                <td class="td_definition">It must "[p]roduce a result."</td>
+            </tr>
+        </table><br />
+
+        <!-- "Halting problem" -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">5. What is the "halting problem" with regards to an uncomputable problem?</td>
+            </tr>
+            <tr>
+                <th>x</th>
+                <td class="td_definition">Deciding, "given any collection of Turing machine instructions together with any initial
+                    tape contents, whether that Turing machine will ever halt if started on that tape."</td>
+            </tr>
+        </table><br />
+
+        <!-- Ch.13 terms -->
+        <table>
+            <tr>
+                <td colspan="2" class="studentinfo1 intro">Chapter 13: Simulation & Modeling</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="intro">Define these terms:</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1:</th>
+                <td class="td_title">scientific method</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Observe, hypothesize, experiment to prove or disprove. Record the results.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2:</th>
+                <td class="td_title">computational model</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Modeling a system through relevant math and algorithms rather than as a physical substitute.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3:</th>
+                <td class="td_title">discrete event simulation</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Applying time within a model only as or when it's relevant.</td>
+            </tr>
+        </table><br />
+
+        <!-- Seven reasons for simulation model -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">List and describe seven reasons to construct a simulation model:</td>
+            </tr>
+            <tr>
+                <th>1.</th>
+                <td class="td_definition"><i>Existence</i>: The real thing might not yet exist.</td>
+            </tr>
+            <tr>
+                <th>2.</th>
+                <td class="td_definition"><i>Physical realization</i>: The real thing may be incorporeal.</td>
+            </tr>
+            <tr>
+                <th>3.</th>
+                <td class="td_definition"><i>Safety</i>: The real thing may not be safe to experiment on at scale.</td>
+            </tr>
+            <tr>
+                <th>4.</th>
+                <td class="td_definition"><i>Speed of construction</i>: It might take too long to build the real thing.</td>
+            </tr>
+            <tr>
+                <th>5.</th>
+                <td class="td_definition"><i>Time scale</i>: The real thing may work too fast or too slow to experiment on.</td>
+            </tr>
+            <tr>
+                <th>6.</th>
+                <td class="td_definition"><i>Ethical behavior</i>: It might be really messed up to work on the real thing.</td>
+            </tr>
+            <tr>
+                <th>7.</th>
+                <td class="td_definition"><i>Ease of modification</i>: It might be a huge pain in the butt to adjust the real thing.</td>
+            </tr>
+        </table><br />
+
+        <!-- Illustris -->
+        <table>
+            <tr>
+                <td colspan="2" class="intro">Illustris: "The Mother of All Computations"</td>
+            </tr>
+            <tr>
+                <th rowspan="2">1:</th>
+                <td class="td_title">What is Illustris?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Cool galaxy formation sim.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">2:</th>
+                <td class="td_title">What fields of science were involved in the Illustris computational model?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Physics, astronomy, and computer science.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">3:</th>
+                <td class="td_title">What does Illustris simulate?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Physics too complex for me to wrap my head around. Gravity, hydrodynamics,
+                    tiny chemical processes, "black hole thermal energy injection," et cetera.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4:</th>
+                <td class="td_title">How long did the project take?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Can't find the year that the collaborators came together and actually began
+                    the project, but the simulation took 19 million CPU hours to complete.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">5:</th>
+                <td class="td_title">How many years of galactic evolution are simulated in Illustris?</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">Over 13.8 billion.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">6:</th>
+                <td class="td_title">Illustris was created using two supercomputers. What is a supercomputer? (Do a Google search)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td_definition">A computer far, far more powerful than anything sold as general-use, with tens
+                    of thousands of processors.</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding:0px;"><iframe width="100%" height="437"
+                        src="https://www.youtube.com/embed/NjSFR40SY58"
+                        title="Illustris Simulation: Most detailed simulation of our Universe" style="border:none;"></iframe></td>
+                <!-- Can't get it to be playable on my page. Youtube's stingy. -->
+            </tr>
+        </table><br />
+    </body>
+</html>
