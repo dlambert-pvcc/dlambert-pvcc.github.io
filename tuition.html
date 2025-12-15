@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Name: Daniel Lambert -->
+<!-- Program Purpose: This program completes the semester. Happy holidays. -->
+<head>
+    <meta charset="utf-8" />
+    <title>Tuition & Fees Calculator</title>
+
+    <style>
+        body {background-color: white;
+            font-family: Cambria, Georgia, "Times New Roman", serif;
+            color: white}
+        h2 {text-align: center;}
+        table {width: 550px;
+            background-color: #a20045;
+            border: 10px solid #054588;
+            margin: 2em auto;
+            padding: 0.5em 1.5em 1.5em 1.5em;}
+        td {text-align: right;
+            padding: 10px;}
+        input {width: 60%;
+            float: left;
+            border: none;
+            border-bottom: 1px solid #555;
+            font-weight: bold;
+            padding: 10px;
+            font-family: Georgia, "Times New Roman", serif;}
+        .button {float: none;}
+        .td-center {text-align: center;}
+    </style>
+
+    <script type="text/javascript">
+        function calculatetuition() {
+            // constants & variables
+            const dollar = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD",});
+            const tuition_rate = 169.30
+            const inst_fee = 1.75
+            const activity_fee = 2.90
+            var total_cost = 0;
+
+            // retrieve user data from form, assign that data to variable
+            amount_in = document.getElementById("cred_amount").value;
+
+            // if no user input, display error message
+            if (amount_in == "") {
+                alert("Please enter a number of credits.");
+                return;
+            }
+
+            // calculate total and display result
+            total_tuition = amount_in * tuition_rate;
+            total_inst = amount_in * inst_fee;
+            total_activity = amount_in * activity_fee;
+            total_cost = total_tuition + total_inst + total_activity;
+            document.getElementById("tuition").value = dollar.format(total_tuition);
+            document.getElementById("institutional").value = dollar.format(total_inst);
+            document.getElementById("activity").value = dollar.format(total_activity);
+            document.getElementById("total").value = dollar.format(total_cost);
+        } // end-calculatetuition()
+    </script>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2"><h2>PVCC TUITION & FEES CALCULATOR</h2></td>
+            </tr>
+            <tr>
+                <td>Number of credits:</td>
+                <td><input type="number" id="cred_amount" min="0" placeholder="credits here"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="td-center"><input type="button" value="Calculate tuition & fees" class="button" onclick="calculatetuition()"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" class="button"></td>
+            </tr>
+            <tr>
+                <td>Tuition:</td>
+                <td><input type="text" id="tuition" placeholder="0" readonly></td>
+            </tr>
+            <tr>
+                <td>Institutional fee:</td>
+                <td><input type="text" id="institutional" placeholder="0" readonly></td>
+            </tr>
+            <tr>
+                <td>Student activity fee:</td>
+                <td><input type="text" id="activity" placeholder="0" readonly></td>
+            </tr>
+            <tr>
+                <td><b>Total:</b></td>
+                <td><input type="text" id="total" placeholder="0" readonly></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
